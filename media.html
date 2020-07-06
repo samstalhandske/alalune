@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>à la lune</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="">
+
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <div class="nav-wrapper" style="height:80px;">
+        <div class="header" id="myHeader">
+            <a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+
+            <ul class="topnav" id="myTopnav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="media.html" class="current">Media</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <h3>Media</h3>
+        <p>media grejer här</p>
+    </div>
+
+    <script>
+        window.onscroll = function() {stick()};
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function stick() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+        }
+    </script>
+
+    <div class="footer">
+        <a href="https://www.instagram.com/alalunecollective/" target="_blank" class="fa fa-instagram footer-link"></a>
+        <a href="https://sptfy.com/alalune" target="_blank" class="fa fa-spotify footer-link"></a>
+        <a href="mailto:alalunecollective@gmail.com"" target="_blank" class="fa fa-envelope footer-link"></a>
+    </footer>
+</body>
+</html>
