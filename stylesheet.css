@@ -13,7 +13,7 @@ h3{
   color: #D83F87;
   font-size: 64px;
   max-width: 100%;
-  margin: 0px;
+  margin: 30px 0px;
 
   text-shadow: 0px 4px 8px rgba(0,0,0,0.65);
 
@@ -24,8 +24,15 @@ h3:hover
   text-shadow: 0px 4px 32px black;
 }
 
+a
+{
+  color: #D83F87;
+  text-decoration: none;
+}
+
+/* CONTENT */
 .content {
-  padding: 128px 25%;
+  padding: 85px 25%;
   text-align: left;
   min-height: 685px;
   max-width: 100%;
@@ -69,11 +76,50 @@ h3:hover
   filter: contrast(3);
 }
 
+/* PROFILES */
+
+.profile-pic
+{
+  width: 33%;
+  height: auto;
+  transition: ease-in 0.15s;
+  filter: grayscale(100%);
+}
+.profile-pic:hover
+{
+  filter: grayscale(0%);
+}
+
+.profile-image
+{
+  float:right;
+  width: 40%;
+}
+
+.profile-desc
+{
+  width: 50%;
+  text-align: justify;
+}
+
+.profile-contact
+{
+  margin-bottom: 200px;
+}
+.releases
+{
+  text-align: justify;
+}
+.release
+{
+  width: 33%;
+}
 
 /* TOP NAV */
 .topnav {
   background-color: white;
   overflow: hidden;
+  z-index: 999;
 
   -webkit-box-shadow: 0px 10px 8px 0px rgba(0,0,0,0.15);
   -moz-box-shadow: 0px 10px 8px -0px rgba(0,0,0,0.15);
@@ -112,8 +158,6 @@ h3:hover
 {
   font-weight: bolder;
 }
-
-
 
 /* FOOTER */
 .footer
@@ -181,6 +225,7 @@ h3:hover
 @media screen and (max-width: 650px) {
   h3  {
     font-size: 30px;
+    margin-top: 0px;
   }
 
   .content
@@ -190,5 +235,27 @@ h3:hover
   .content iframe
   {
     width: 100%;
+  }
+
+  .profile-pic
+  {
+    width: 32%;
+  }
+  .profile-desc
+  {
+    width: 100%;
+  }
+  .profile-image
+  {
+    float:none;
+    width:100%;
+  }
+  .profile-contact
+  {
+    margin-bottom: 50px;
+  }
+  .release
+  {
+    width:100%;
   }
 }
