@@ -90,10 +90,17 @@ a
   filter: grayscale(0%);
 }
 
+.gang
+{
+  width: 100%;
+}
+
 .profile-image
 {
   float:right;
   width: 40%;
+
+  overflow: hidden;
 }
 
 .profile-desc
@@ -227,6 +234,10 @@ a
     font-size: 30px;
     margin-top: 0px;
   }
+  h1
+  {
+    font-size: 20px;
+  }
 
   .content
   {
@@ -237,9 +248,13 @@ a
     width: 100%;
   }
 
+  .gang
+  {
+  }
+
   .profile-pic
   {
-    width: 32%;
+    width: 49%;
   }
   .profile-desc
   {
