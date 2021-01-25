@@ -1,72 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-}
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=1.2" media="screen"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+    <title>À LA LUNE</title>
+</head>
+<body>
+    <div class="menuBar">
+        <a href="#">
+            <img class="menuLogo" src="https://i.imgur.com/WGsHKwB.png">
+        </a>
+        
+        <ol id="navList">
+            <li><a href="#">Livestream</a></li>
+            <li><a href="#">À La Lune</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Contact</a></li>
+        </ol>
+    </div>
 
-html {
-    height:100%;
-}
-body{
-    height:100%;
-    background-color: #0C0F0A;
-}
+    <div class="container">
+        <div id="twitch-embed"></div>
 
-.menuBar
-{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #0C0F0A;
-}
+        <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 
-.menuLogo
-{
-    width: 30px;
-    height: auto;
-    margin: 10px;
-    padding-left: 5px;
+        <script type="text/javascript">
+            new Twitch.Player("twitch-embed", {
+                channel: "alalunecollective",
+                width: "100%",
+                height: 1080
+            });
+        </script>
+    </div>
 
-    transition: ease-in-out 0.1s;
-}
-.menuLogo:hover
-{
-    filter: contrast(300%);
-    filter:brightness(200%);
-}
-
-#navList
-{
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    text-decoration: none;
-}
-li 
-{
-    padding-right: 20px;
-}
-li a{
-    text-decoration: none;
-    color: #ffffff;
-    transition: ease-in-out 0.1s;
-
-}
-li a:hover
-{
-    color: #FA198B;
-}
-
-
-.footer
-{
-    display: flex;
-    background-color: #0C0F0A;
-    padding-top: 16px;
-    padding-bottom: 16px;
-
-    align-items: center;
-    justify-content:center;
-}
+    <div class="footer">
+        <ol id="navList">
+            <li><a href="https://discord.gg/K2jCrxxTHr" class="fa fa-discord" aria-hidden="true" title="Chat in our community"></a></li>
+            <li><a href="https://www.twitch.tv/alalunecollective/" class="fa fa-twitch" title="Livestream"></a></li>
+            <li><a href="https://www.sptfy.com/alalune/" class="fa fa-spotify" title="Our music"></a></li>
+            <li><a href="mailto:alalunecollective@gmail.com" class="fa fa-envelope" title="Contact us"></a></li>
+            <li><a href="https://www.instagram.com/alalunecollective/" class="fa fa-instagram" title="Follow us"></a></li>
+        </ol>
+    </div>
+</body>
+</html>
